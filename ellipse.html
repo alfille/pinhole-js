@@ -14,14 +14,20 @@
             function step(timestamp) {
                 var p = new Pinhole()
                 // draw the cube
-                p.drawCube(-0.3, -0.3, -0.3, 0.3, 0.3, 0.3)
+                // p.drawCube(-0.3, -0.3, -0.3, 0.3, 0.3, 0.3)
                 // rotate a little on the X and Y axis.
                 p.rotate(Math.PI/3, Math.PI/6, 0)
                 // draw circle 1
                 p.begin()
                 p.drawCircle(0, 0, 0, 0.25)
                 p.rotate(0, Math.PI/2, cr1z)
-                p.colorize("red")
+                p.colorize("blue")
+                p.end()
+                // draw ellipse 1
+                p.begin()
+                p.drawEllipse(0, 0, 0, 0.25, 0.40)
+                p.rotate(0, Math.PI/2, cr1z)
+                p.colorize("green")
                 p.end()
                 // draw circle 2
                 p.begin()
