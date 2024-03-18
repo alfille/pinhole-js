@@ -1,4 +1,4 @@
-Copy of Tidwall's [pinhole-js]([https://github.com/tidwall/pinhole](https://github.com/tidwall/pinhole-js) with tthtlc's [ellipse](https://github.com/tthtlc/pinhole-js/tree/master) added.
+Copy of Tidwall's [pinhole-js](https://github.com/tidwall/pinhole-js) with tthtlc's [ellipse](https://github.com/tthtlc/pinhole-js/tree/master) added.
 
 # `pinhole-js`
 
