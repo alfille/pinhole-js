@@ -1,3 +1,5 @@
+Copy of Tidwall's [pinhole-js]([https://github.com/tidwall/pinhole](https://github.com/tidwall/pinhole-js) with tthtlc's [ellipse](https://github.com/tthtlc/pinhole-js/tree/master) added.
+
 # `pinhole-js`
 
 3D Wireframe Drawing Library for Javavscript. This is a port of [pinhole](https://github.com/tidwall/pinhole) for Go.
