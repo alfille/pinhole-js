@@ -4,10 +4,58 @@
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
+
+class Rotator {
+	constructor( pinhole ) {
+		this.pinhole = pinhole ;
+		this.inc = Math.PI/360;
+		this.Stop() ;
+	}
+	
+	Stop() {
+		this.dx = 0 ;
+		this.dy = 0 ;
+		this.dz = 0 ;
+	}
+	
+	X(d) {
+		this.dx += d*this.inc ;
+	}
+	
+	Y(d) {
+		this.dy += d*this.inc ;
+	}
+	
+	Z(d) {
+		this.dz += d*this.inc ;
+	}
+	
+	Step() {
+		this.pinhole.rotate( this.dx, this.dy, this.dz ) ;
+	}
+	
+	Frame(canvas) {
+		this.Step() ;
+		this.pinhole.render(canvas,{bgColor:'white'});
+	}
+	
+	Run( canvas ) {
+		const frame = () => {
+			this.Step();
+			this.pinhole.render(canvas,{bgColor:'white'});
+			window.requestAnimationFrame(frame);
+		}
+		window.requestAnimationFrame(frame);
+	}
+}
+
 class Pinhole {
     constructor(){
+		// lines is total graphic elements
         this.lines = [];
+        // stack is start of individual elements ( begin -> end )
         this.stack = [];
+        // actions on stack, if any, else all
     }
     
     begin(){
@@ -473,3 +521,4 @@ class Pinhole {
         }
     }
 }
+	
